@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Quicksand:wght@600&display=swap");
+@import "mixins";
+
+$bg-color: #ffd553;
+$red-color: #ff000f;
+$green-color: #008000;
+$blue-color: #000fff;
+$body-font: "Open Sans", sans-serif;
+$heading: "Quicksand", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $bg-color;
+  font-family: $body-font;
+  text-align: center;
+  margin-top: 10%;
+}
+
+h1 {
+  font-family: $heading;
+  font-size: 3em;
+  padding-bottom: 0.5em;
+}
+
+p {
+  font-size: 1.5em;
+  padding-bottom: 0.5em;
+}
+
+div {
+  padding: 10px 0;
+}
+
+label,
+output {
+  font-size: 1.5em;
+  margin: 0 15px;
+}
+
+input {
+  -webkit-appearance: none;
+  width: 10%;
+  height: 1.5em;
+  border-radius: 10px;
+  outline: none;
+}
+
+#red-slider {
+  input[type="range"] {
+    border: 2px solid $red-color;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    background-color: $red-color;
+    @include slider-styling;
+  }
+}
+
+#green-slider {
+  input[type="range"] {
+    border: 2px solid $green-color;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    background-color: $green-color;
+    @include slider-styling;
+  }
+}
+
+#blue-slider {
+  input[type="range"] {
+    border: 2px solid $blue-color;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    background-color: $blue-color;
+    @include slider-styling;
+  }
+}
+
+#hexColor {
+  width: 100px;
+  height: 100px;
+  background-color: #000;
+  margin: 0 auto;
+}
+
+label[for="red"] {
+  background-color: $red-color;
+  padding: 5px 12px;
+}
+
+output[for="red"] {
+  @extend label[for="red"];
+}
+
+label[for="green"] {
+  background-color: $green-color;
+  padding: 5px 12px;
+}
+
+output[for="green"] {
+  @extend label[for="green"];
+}
+
+label[for="blue"] {
+  background-color: $blue-color;
+  padding: 5px 12px;
+}
+
+output[for="blue"] {
+  @extend label[for="blue"];
+}

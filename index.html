@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RGB to HEX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Show me the HEX code</h1>
+    <p>Use the slider to find out the HEX code</p>
+    <div id="red-slider">
+        <label for="red">R</label>
+        <input type="range" name="red" id="red" value="255" min="0" max="255">
+        <output for="red" id="red-bg">0</output>
+    </div>
+    <div id="green-slider">
+        <label for="green">G</label>
+        <input type="range" name="green" id="green" value="255" min="0" max="255">
+        <output for="green" id="green-bg">0</output>
+    </div>
+    <div id="blue-slider">
+        <label for="blue">B</label>
+        <input type="range" name="blue" id="blue">
+        <output for="blue" id="blue-bg">0</output>
+    </div>
+    <p id="hex">#000000</p>
+    <div id="hexColor"></div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

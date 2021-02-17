@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Quicksand:wght@600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #ffd553;
+  font-family: "Open Sans", sans-serif;
+  text-align: center;
+  margin-top: 10%;
+}
+
+h1 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 3em;
+  padding-bottom: 0.5em;
+}
+
+p {
+  font-size: 1.5em;
+  padding-bottom: 0.5em;
+}
+
+div {
+  padding: 10px 0;
+}
+
+label,
+output {
+  font-size: 1.5em;
+  margin: 0 15px;
+}
+
+input {
+  -webkit-appearance: none;
+  width: 10%;
+  height: 1.5em;
+  border-radius: 10px;
+  outline: none;
+}
+
+#red-slider input[type="range"] {
+  border: 2px solid #ff000f;
+}
+
+#red-slider input[type="range"]::-webkit-slider-thumb {
+  background-color: #ff000f;
+  -webkit-appearance: none;
+          appearance: none;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  outline: none;
+}
+
+#green-slider input[type="range"] {
+  border: 2px solid #008000;
+}
+
+#green-slider input[type="range"]::-webkit-slider-thumb {
+  background-color: #008000;
+  -webkit-appearance: none;
+          appearance: none;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  outline: none;
+}
+
+#blue-slider input[type="range"] {
+  border: 2px solid #000fff;
+}
+
+#blue-slider input[type="range"]::-webkit-slider-thumb {
+  background-color: #000fff;
+  -webkit-appearance: none;
+          appearance: none;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  outline: none;
+}
+
+#hexColor {
+  width: 100px;
+  height: 100px;
+  background-color: #000;
+  margin: 0 auto;
+}
+
+label[for="red"], output[for="red"] {
+  background-color: #ff000f;
+  padding: 5px 12px;
+}
+
+label[for="green"], output[for="green"] {
+  background-color: #008000;
+  padding: 5px 12px;
+}
+
+label[for="blue"], output[for="blue"] {
+  background-color: #000fff;
+  padding: 5px 12px;
+}
+/*# sourceMappingURL=style.css.map */
