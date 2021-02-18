@@ -15,7 +15,7 @@ $heading: "Quicksand", sans-serif;
 }
 
 body {
-  background-color: $bg-color;
+  background-color: #000;
   font-family: $body-font;
   text-align: center;
   margin-top: 10%;
@@ -24,12 +24,14 @@ body {
 h1 {
   font-family: $heading;
   font-size: 3em;
-  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+  color: #fff;
 }
 
 p {
   font-size: 1.5em;
   padding-bottom: 0.5em;
+  color: #fff;
 }
 
 div {
@@ -53,43 +55,69 @@ input {
 #red-slider {
   input[type="range"] {
     border: 2px solid $red-color;
+    width: 20em;
   }
   input[type="range"]::-webkit-slider-thumb {
     background-color: $red-color;
     @include slider-styling;
+  }
+  input[type="range"]::-moz-range-thumb {
+    background-color: $red-color;
+    border: none;
+    @include slider-styling;
+  }
+  input[type="range"]::-moz-range-progress {
+    background-color: $red-color;
+    height: 1.2em;
   }
 }
 
 #green-slider {
   input[type="range"] {
     border: 2px solid $green-color;
+    width: 20em;
   }
   input[type="range"]::-webkit-slider-thumb {
     background-color: $green-color;
     @include slider-styling;
+  }
+  input[type="range"]::-moz-range-thumb {
+    background-color: $green-color;
+    @include slider-styling;
+    border: none;
+  }
+  input[type="range"]::-moz-range-progress {
+    background-color: $green-color;
+    height: 1.2em;
   }
 }
 
 #blue-slider {
   input[type="range"] {
     border: 2px solid $blue-color;
+    width: 20em;
   }
   input[type="range"]::-webkit-slider-thumb {
     background-color: $blue-color;
     @include slider-styling;
   }
-}
-
-#hexColor {
-  width: 100px;
-  height: 100px;
-  background-color: #000;
-  margin: 0 auto;
+  input[type="range"]::-moz-range-thumb {
+    background-color: $blue-color;
+    border: none;
+    @include slider-styling;
+  }
+  input[type="range"]::-moz-range-progress {
+    background-color: $blue-color;
+    height: 1.2em;
+  }
 }
 
 label[for="red"] {
   background-color: $red-color;
-  padding: 5px 12px;
+  padding: 5px 20px;
+  color: #fff;
+  box-shadow: none;
+  border-radius: 3px;
 }
 
 output[for="red"] {
@@ -97,8 +125,8 @@ output[for="red"] {
 }
 
 label[for="green"] {
+  @extend label[for="red"];
   background-color: $green-color;
-  padding: 5px 12px;
 }
 
 output[for="green"] {
@@ -106,10 +134,22 @@ output[for="green"] {
 }
 
 label[for="blue"] {
+  @extend label[for="red"];
   background-color: $blue-color;
-  padding: 5px 12px;
 }
 
 output[for="blue"] {
   @extend label[for="blue"];
+}
+
+#hex {
+  margin: 0 auto;
+  background-color: #fff;
+  width: 14%;
+  font-size: 2.5em;
+  height: 9vh;
+  padding-top: 2px;
+  color: #000;
+  opacity: 0.9;
+  margin-top: 0.5em;
 }

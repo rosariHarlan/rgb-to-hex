@@ -7,7 +7,7 @@
 }
 
 body {
-  background-color: #ffd553;
+  background-color: #000;
   font-family: "Open Sans", sans-serif;
   text-align: center;
   margin-top: 10%;
@@ -16,12 +16,14 @@ body {
 h1 {
   font-family: "Quicksand", sans-serif;
   font-size: 3em;
-  padding-bottom: 0.5em;
+  margin-bottom: 0.5em;
+  color: #fff;
 }
 
 p {
   font-size: 1.5em;
   padding-bottom: 0.5em;
+  color: #fff;
 }
 
 div {
@@ -44,6 +46,7 @@ input {
 
 #red-slider input[type="range"] {
   border: 2px solid #ff000f;
+  width: 20em;
 }
 
 #red-slider input[type="range"]::-webkit-slider-thumb {
@@ -56,8 +59,25 @@ input {
   outline: none;
 }
 
+#red-slider input[type="range"]::-moz-range-thumb {
+  background-color: #ff000f;
+  border: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  outline: none;
+}
+
+#red-slider input[type="range"]::-moz-range-progress {
+  background-color: #ff000f;
+  height: 1.2em;
+}
+
 #green-slider input[type="range"] {
   border: 2px solid #008000;
+  width: 20em;
 }
 
 #green-slider input[type="range"]::-webkit-slider-thumb {
@@ -70,8 +90,25 @@ input {
   outline: none;
 }
 
+#green-slider input[type="range"]::-moz-range-thumb {
+  background-color: #008000;
+  -moz-appearance: none;
+       appearance: none;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  outline: none;
+  border: none;
+}
+
+#green-slider input[type="range"]::-moz-range-progress {
+  background-color: #008000;
+  height: 1.2em;
+}
+
 #blue-slider input[type="range"] {
   border: 2px solid #000fff;
+  width: 20em;
 }
 
 #blue-slider input[type="range"]::-webkit-slider-thumb {
@@ -84,25 +121,48 @@ input {
   outline: none;
 }
 
-#hexColor {
-  width: 100px;
-  height: 100px;
-  background-color: #000;
-  margin: 0 auto;
+#blue-slider input[type="range"]::-moz-range-thumb {
+  background-color: #000fff;
+  border: none;
+  -moz-appearance: none;
+       appearance: none;
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  outline: none;
 }
 
-label[for="red"], output[for="red"] {
+#blue-slider input[type="range"]::-moz-range-progress {
+  background-color: #000fff;
+  height: 1.2em;
+}
+
+label[for="red"], output[for="red"], label[for="green"], output[for="green"], label[for="blue"], output[for="blue"] {
   background-color: #ff000f;
-  padding: 5px 12px;
+  padding: 5px 20px;
+  color: #fff;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border-radius: 3px;
 }
 
 label[for="green"], output[for="green"] {
   background-color: #008000;
-  padding: 5px 12px;
 }
 
 label[for="blue"], output[for="blue"] {
   background-color: #000fff;
-  padding: 5px 12px;
+}
+
+#hex {
+  margin: 0 auto;
+  background-color: #fff;
+  width: 14%;
+  font-size: 2.5em;
+  height: 9vh;
+  padding-top: 2px;
+  color: #000;
+  opacity: 0.9;
+  margin-top: 0.5em;
 }
 /*# sourceMappingURL=style.css.map */
